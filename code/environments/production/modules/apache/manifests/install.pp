@@ -9,6 +9,6 @@ class apache::install (
 )  inherits apache::params {
   package { 'install_apache':
     name => $install_package,
-    ensure => $apche::install_ensure,
+    ensure => $apache::install_ensure,
   }
 }

@@ -1,4 +1,4 @@
-Listen <%apache::vhosts_port %>
+Listen <%= $apache::vhosts_port %>
 <VirtualHost *:<%= $apache::vhosts_port %>>
       DocumentRoot "<%= $apache::vhosts_root %>"
       ServerName www.<%= $spache::vhosts_servername %>

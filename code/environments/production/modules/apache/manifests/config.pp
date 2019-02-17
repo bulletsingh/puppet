@@ -7,11 +7,11 @@
 class apache::config (
   $config_path = $apache::params::config_path,
   $config_source = $apache::params::config_source,
-) inherits apache::params{
+) inherits apache::params {
   file { 'apache_config':
     path   => $config_path,
     source => $config_path,
     ensure => $apache::config_ensure,
-    notify => service['apache_service'],
+    notify => Service['apache_service'],
   }
 }

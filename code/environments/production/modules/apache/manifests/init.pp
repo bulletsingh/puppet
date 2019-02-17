@@ -28,6 +28,6 @@ class apache (
   
   Class['apache::install']
   -> Class['apache::config']
-  -> Class['apache::service']
-  -> Class['apache""vhosts']
+  ~> Class['apache::service']
+  -> Class['apache::vhosts']
 }
